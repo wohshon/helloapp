@@ -1,0 +1,10 @@
+{
+  "realm": "demo-realm",
+  "auth-server-url": "https://sso-sso.apps.cluster-sgp-5a74.sgp-5a74.openshiftworkshop.com/auth",
+  "ssl-required": "external",
+  "resource": "helloapp",
+  "credentials": {
+    "secret": "2e306fc2-89ab-479f-8fcf-752184ae66a7"
+  },
+  "confidential-port": 0
+}
