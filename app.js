@@ -25,7 +25,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
     var memoryStore = new session.MemoryStore();
     var keycloak = new Keycloak({ store: memoryStore });
-    app.use( keycloak.middleware() );
+var sess = {
+  secret: 'test12345',
+  resave: false,
+  saveUninitialized: true,
+  store: memoryStore,
+  cookie: {
+    secure: false,
+  }
+}
+app.use(session(sess));
+app.use( keycloak.middleware() );
 
 
 app.use('/',keycloak.protect(), indexRouter);
