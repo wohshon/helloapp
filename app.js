@@ -38,8 +38,8 @@ app.use(session(sess));
 app.use( keycloak.middleware() );
 
 
-//app.use('/',keycloak.protect(), indexRouter);
-app.use('/', indexRouter);
+app.use('/',keycloak.protect(), indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
